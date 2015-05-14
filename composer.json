@@ -1,8 +1,16 @@
 {
-    "name": "symfony/framework-standard-edition",
+    "name": "Sistema de gestion de colecciones",
     "license": "MIT",
     "type": "project",
-    "description": "The \"Symfony Standard Edition\" distribution",
+    "description": "Proyecto para el curso de Imagina Formacion donde desarrollaremos una aplicacion para gestionar colecciones",
+    "authors" : [
+	{	
+		"name": "Javier Carnicer Hernandez",
+		"email": "javcarher@gmail.com",
+		"role": "desarrollador"
+	}
+
+    ],
     "autoload": {
         "psr-0": { "": "src/", "SymfonyStandard": "app/" }
     },
