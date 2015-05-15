@@ -1,5 +1,5 @@
 {
-    "name": "Sistema de gestion de colecciones",
+    "name": "sammet/gestion-colecciones",
     "license": "MIT",
     "type": "project",
     "description": "Proyecto para el curso de Imagina Formacion donde desarrollaremos una aplicacion para gestionar colecciones",
