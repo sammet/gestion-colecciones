@@ -127,6 +127,29 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        // cambi_gestion_homepage
+        if (0 === strpos($pathinfo, '/hello') && preg_match('#^/hello/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'cambi_gestion_homepage')), array (  '_controller' => 'Cambi\\GestionBundle\\Controller\\DefaultController::indexAction',));
+        }
+
+        if (0 === strpos($pathinfo, '/colecciones/lista')) {
+            // cambi_gestion_colecciones_list
+            if ($pathinfo === '/colecciones/listar') {
+                return array (  '_controller' => 'Cambi\\GestionBundle\\Controller\\DefaultController::listAction',  '_route' => 'cambi_gestion_colecciones_list',);
+            }
+
+            // cambi_gestion_articulos_coleccion
+            if (0 === strpos($pathinfo, '/colecciones/lista_articulos') && preg_match('#^/colecciones/lista_articulos(?:/(?P<idarticulo>[^/]++))?$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'cambi_gestion_articulos_coleccion')), array (  '_controller' => 'Cambi\\GestionBundle\\Controller\\ArticulosController::articuloAction',  'idarticulo' => 1,));
+            }
+
+        }
+
+        // my_recipes_homepage
+        if (0 === strpos($pathinfo, '/hello') && preg_match('#^/hello/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'my_recipes_homepage')), array (  '_controller' => 'My\\RecipesBundle\\Controller\\DefaultController::indexAction',));
+        }
+
         // homepage
         if ($pathinfo === '/app/example') {
             return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::indexAction',  '_route' => 'homepage',);

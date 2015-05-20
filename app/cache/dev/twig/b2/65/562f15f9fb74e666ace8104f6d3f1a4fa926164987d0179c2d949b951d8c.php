@@ -1,6 +1,6 @@
 <?php
 
-/* SensioDistributionBundle::Configurator/final.html.twig */
+/* SensioDistributionBundle:Configurator:final.html.twig */
 class __TwigTemplate_b265562f15f9fb74e666ace8104f6d3f1a4fa926164987d0179c2d949b951d8c extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -8,7 +8,7 @@ class __TwigTemplate_b265562f15f9fb74e666ace8104f6d3f1a4fa926164987d0179c2d949b9
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("SensioDistributionBundle::Configurator/layout.html.twig", "SensioDistributionBundle::Configurator/final.html.twig", 1);
+        $this->parent = $this->loadTemplate("SensioDistributionBundle::Configurator/layout.html.twig", "SensioDistributionBundle:Configurator:final.html.twig", 1);
         $this->blocks = array(
             'content_class' => array($this, 'block_content_class'),
             'content' => array($this, 'block_content'),
@@ -94,7 +94,7 @@ class __TwigTemplate_b265562f15f9fb74e666ace8104f6d3f1a4fa926164987d0179c2d949b9
 
     public function getTemplateName()
     {
-        return "SensioDistributionBundle::Configurator/final.html.twig";
+        return "SensioDistributionBundle:Configurator:final.html.twig";
     }
 
     public function isTraitable()
