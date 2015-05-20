@@ -1,0 +1,17 @@
+# src/Cambi/GestionBundle/Resources/config/doctrine/Colecciones.orm.yml
+Cambi\GestionBundle\Entity\Colecciones:
+    type: entity
+    table: colecciones
+    id:
+        id:
+            type: integer
+            generator: { strategy: AUTO }
+    fields:
+        nombre:
+            type: string
+            length: 100
+        categoria:
+            type: string
+            length: 50
+        descripcion:
+            type: text

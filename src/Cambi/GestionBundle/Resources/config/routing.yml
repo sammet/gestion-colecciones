@@ -1,0 +1,11 @@
+cambi_gestion_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: CambiGestionBundle:Default:index }
+
+cambi_gestion_colecciones_list:
+    path:     /colecciones/listar
+    defaults: { _controller: CambiGestionBundle:Default:list }
+
+cambi_gestion_articulos_coleccion:
+    path:     /colecciones/lista_articulos/{idarticulo}
+    defaults: { _controller: CambiGestionBundle:Articulos:articulo, idarticulo:1 }
